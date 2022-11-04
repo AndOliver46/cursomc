@@ -1,4 +1,4 @@
-package com.andoliver46.cursomc.dominio;
+package com.andoliver46.cursomc.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
