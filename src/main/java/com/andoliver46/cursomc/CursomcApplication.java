@@ -21,7 +21,7 @@ import com.andoliver46.cursomc.domain.Pedido;
 import com.andoliver46.cursomc.domain.Produto;
 import com.andoliver46.cursomc.domain.enums.EstadoPagamento;
 import com.andoliver46.cursomc.domain.enums.TipoCliente;
-import com.andoliver46.cursomc.repositories.CategoriaRespository;
+import com.andoliver46.cursomc.repositories.CategoriaRepository;
 import com.andoliver46.cursomc.repositories.CidadeRepository;
 import com.andoliver46.cursomc.repositories.ClienteRepository;
 import com.andoliver46.cursomc.repositories.EnderecoRepository;
@@ -35,7 +35,7 @@ import com.andoliver46.cursomc.repositories.ProdutoRepository;
 public class CursomcApplication implements CommandLineRunner {
 
 	@Autowired
-	private CategoriaRespository categoriaRepository;
+	private CategoriaRepository categoriaRepository;
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	@Autowired
@@ -116,7 +116,7 @@ public class CursomcApplication implements CommandLineRunner {
 		pedidoRepository.saveAll(Arrays.asList(ped1,ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1,pagto2));
 
-		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 1, 2.000);
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 1, 2000.00);
 		ItemPedido ip2 = new ItemPedido(ped1, p3, 0.00, 2, 80.00);
 		ItemPedido ip3 = new ItemPedido(ped2, p2, 100.00, 1, 800.00);
 		

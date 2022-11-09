@@ -13,7 +13,7 @@ import com.andoliver46.cursomc.services.exceptions.ObjectNotFoundException;
 public class ClienteService {
 
 	@Autowired
-	ClienteRepository repo;
+	private ClienteRepository repo;
 
 	public Cliente findById(Integer id) {
 		Optional<Cliente> obj = repo.findById(id);

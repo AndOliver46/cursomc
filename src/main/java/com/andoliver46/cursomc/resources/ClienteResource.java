@@ -15,7 +15,7 @@ import com.andoliver46.cursomc.services.ClienteService;
 public class ClienteResource {
 
 	@Autowired
-	ClienteService service;
+	private ClienteService service;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Cliente> findById(@PathVariable Integer id) {
